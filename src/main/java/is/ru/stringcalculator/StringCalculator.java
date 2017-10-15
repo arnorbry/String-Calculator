@@ -11,7 +11,17 @@ public class StringCalculator{
 				String nums[] = numbers.split(",");
 				int sum = 0;
 				for(String num : nums){
-					sum = sum + Integer.parseInt(num);
+					if(num.contains("\n")){
+						int s = 0;
+						String ns[] = num.split("\n");
+						for(String n : ns){
+							s = s + Integer.parseInt(n);
+						}
+						sum = sum + s;
+					}
+					else{
+						sum = sum + Integer.parseInt(num);	
+					}
 				}
 				return sum;
 			}

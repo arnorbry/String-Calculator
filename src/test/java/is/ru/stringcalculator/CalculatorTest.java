@@ -21,4 +21,8 @@ public class CalculatorTest{
 	public void TestThreeNumbers(){
 		assertEquals(6, StringCalculator.add("1,2,3"));
 	}
+	@Test 
+	public void TestNewlineSeperator(){
+		assertEquals(6, StringCalculator.add("1\n2,3"));
+	}
 }
