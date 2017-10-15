@@ -25,4 +25,8 @@ public class CalculatorTest{
 	public void TestNewlineSeperator(){
 		assertEquals(6, StringCalculator.add("1\n2,3"));
 	}
+	@Test
+	public void TestNegativeNumber(){
+		assertEquals(2, StringCalculator.add("2,1005"));
+	}
 }

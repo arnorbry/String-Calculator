@@ -15,17 +15,24 @@ public class StringCalculator{
 						int s = 0;
 						String ns[] = num.split("\n");
 						for(String n : ns){
-							s = s + Integer.parseInt(n);
+							if(Integer.parseInt(n) < 1000){
+								s = s + Integer.parseInt(n);
+							}
 						}
 						sum = sum + s;
 					}
 					else{
-						sum = sum + Integer.parseInt(num);	
+						if(Integer.parseInt(num) < 1000){
+							sum = sum + Integer.parseInt(num);		
+						}
 					}
 				}
 				return sum;
 			}
-			return Integer.parseInt(numbers);
+			if(Integer.parseInt(numbers) < 1000){
+				return Integer.parseInt(numbers);
+			}
+			return 0;
 		}
 	}
 }
